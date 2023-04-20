@@ -1,0 +1,1054 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/goodrelations/v1#ProductOrService"
+    }, {
+      "@id" : "http://schema.org/Product"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/#AutoPilot"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#GPS"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#ProximitySensing"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#SpeedControl"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/#DrivingHelp"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Interior"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Lights"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#SoundSystem"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/#DrivingSide"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#EnergySource"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Gearbox"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Transmission"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#VehicleOptions"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/#ElectricEngine"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#FuelType"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#HydridEngine"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#ThermalEngine"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/#EnergySource"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Gearbox"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Transmission"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#VehicleOptions"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/Electricity"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Diesel"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Gasoline"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/#Hallogen"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Laser"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Led"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#Xenon"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://vehiclegoodrelations.org/#AllWheelDrive"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#FrontWheelDrive"
+    }, {
+      "@id" : "http://vehiclegoodrelations.org/#RearWheelDrive"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/goodrelations/v1#ProductOrService",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#Individual"
+  } ]
+}, {
+  "@id" : "http://purl.org/goodrelations/v1#acceptedPaymentMethods",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#PayInFourMethod"
+  } ]
+}, {
+  "@id" : "http://purl.org/goodrelations/v1#hasPriceSpecification",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#DeliveryMethod"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.org/goodrelations/v1"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#AllWheelDrive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AllWheelDrive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Transmission"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#AsynchronousElectricEngine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AsynchronousElelctricEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ElectricEngine"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SynchronousElectricEngine"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#AutoPilot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AutoPilot"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DrivingHelp"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#AutomaticGearbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Gearbox"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Manual"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@value" : "AutomaticGearbox"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Bang&Olusfen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SoundSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Des enceintes fournies par la marque Bang&Olusfen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bang&Olusfen"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Battery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Battery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EnergySource"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#FuelTank"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#ClothInterior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ClothInterior"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Interior"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#DeliveryModeHome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/goodrelations/v1#DeliveryMethod" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Livraison par une société de livraison."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Delivery mode home"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#DeliveryRange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Diesel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Diesel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#FuelType"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#DrivingHelp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les aides à la conduite disponibles. (GPS, radar de recul, etc)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DrivingHelp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleOptions"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#DrivingSide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Spécifie le sens de circulation qui a été prévu pour la voiture."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DrivingSide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#ElectricEngine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cette classe donne le type de moteur électrique utilisé"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ElectricEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#EnergySource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cette classe permet de spéficier quelle ressource le véhicue utilise pour avancer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EnergySource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#EngineSpecs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cette classe donne des spécifications sur le moteur. A savoir son type (électrique, thermique, hybride) et s'il utilise du diesel ou de l'essence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EngineSpecs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Focal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SoundSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Des enceintes fournies par la marque Focal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Focal"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#FrontWheelDrive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FrontWheelDrive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Transmission"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#FuelTank",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FuelTank"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EnergySource"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#FuelType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne le type de combustible utilisé par le moteur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FuelType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#GPS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GPS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DrivingHelp"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Gasoline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gasoline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#FuelType"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Gearbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les spécifications de la boite de vitesses, par exemple si elle est automatique ou manuelle, et son nombre de rapports via une data property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gearbox"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Hallogen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hallogen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Lights"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#HydridEngine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HybridEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Interior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les options de finitions intérieur des sièges"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Interior"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleOptions"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#JBL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SoundSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Des enceintes fournies par la marque JBL."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "JBL"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Laser",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Laser"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Lights"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#LeatherInterior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "LeatherInterior"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Interior"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Led",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Led"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Lights"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#LeftDrivingSide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Signifie que le volant est à droite pour une conduite à gauche"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "LeftDrivingSide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DrivingSide"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Right"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Lights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les options concernant les phares de la voiture"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lights"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleOptions"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Manual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ManualGearbox"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Gearbox"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#PayInFourMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PayInFourMethod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#PaymentMethod"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Pioneer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SoundSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Des enceintes fournies par la marque Pioneer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pioneer"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#ProximitySensing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ProximitySensing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DrivingHelp"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#RearWheelDrive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "RearWheelDrive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Transmission"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Signifie que le volant est à gauche pour une conduite à droite"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "RightDrivingSide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DrivingSide"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Sony",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SoundSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Des enceintes fournies par la marque Sony."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sony"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#SoundSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les options possible en terme de système audio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SoundSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleOptions"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#SpeedControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SpeedControl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DrivingHelp"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#SynchronousElectricEngine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SynchronousElectricEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ElectricEngine"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#ThermalEngine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ThermalEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Transmission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les différentes transmissions possibles pour la voiture. (Traction, Propulsion, 4x4)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Transmission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Vehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cette classe représente les voitures proposées par l'entreprise"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#ProductOrService"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#VehicleOptions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cette classe contient les options que l'acheteur peut choisir de rajouter au moment de l'achat."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "VehicleOptions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contient les sousclasses permettant de préciser les spécifications de la voiture."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "VehicleSpecs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#ProductOrService"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#VelvetInterior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Interior"
+  } ],
+  "http://www.w3.org/2002/07/owl#incompatibleWith" : [ {
+    "@value" : "VelvetInterior"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#Xenon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Xenon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Lights"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#capacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne la capacité de charge ou en essence/diesel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EnergySource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "capacity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#cylinderCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne la cylindrée du moteur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ThermalEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cylinder capacity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#cylinderCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne le nombre de cylindres du moteur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ThermalEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cylinder count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#deliveryOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "delivery origin"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#eachPaymentIs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les informations relatives à chaque paiement à effectuer pour payer en plusieurs fois."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#PayInFourMethod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "each payment is"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#UnitPriceSpecification"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#gearsCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne le nombre de rapport de la boîte de vitesse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Gearbox"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "gears count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#hasDeliveryRange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relie la classe Delivery Range qui contient la propriété du rayon maximal de livraison à la classe delivery method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#DeliveryMethod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has delivery range"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DeliveryRange"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#hasFuelType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Spécifie le type de carburant du moteur thermique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ThermalEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has fuel type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#FuelType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#hasVehicleSpecs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne les spécifications du véhicule en liant les classes vehicle et vehicleSpecs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has vehicle specs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#VehicleSpecs"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#has_camera",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indique si le système de proximity sensing est pourvu d'une caméra de recul"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ProximitySensing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has camera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#has_cruiseControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indique si le système de régulation de la vitesse à le cruise control."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SpeedControl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has cruise control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#has_energySource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Précise le type d'énergie utilisé par les moteurs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ElectricEngine"
+  }, {
+    "@id" : "http://vehiclegoodrelations.org/#HydridEngine"
+  }, {
+    "@id" : "http://vehiclegoodrelations.org/#ThermalEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has energy source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EnergySource"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#has_frontSensors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indique s'il y a des capteurs à l'avant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ProximitySensing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has front sensors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#has_rearSensors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indique s'il y a des capteurs à l'arrière"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ProximitySensing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has rear sensors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#has_speedLimiter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indique si le système de régulation de la vitesse à le limiteur de vitesse."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#SpeedControl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has speed limiter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#has_traffic_information",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indique si le gps est capable de connaître le traffic en temps réel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#GPS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has traffic information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#mass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne la masse du produit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#power",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne la puissance du moteur et du système audio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+  }, {
+    "@id" : "http://vehiclegoodrelations.org/#SoundSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#radius",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DeliveryRange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "radius"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#DeliveryMethod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#torque",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne le couple du moteur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#EngineSpecs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "torque"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/#valveCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne le nombre de vavle du moteur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ThermalEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "valve count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/Electricity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#FuelType"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/deliveryServedCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indique les pays qui peuvent être livrés en se référant à leur URI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DeliveryRange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "delivery served country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/hasEngine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indiuque qu'un moteur hybride est constitué d'un moteur électrique et d'un moteur thermique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#HydridEngine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has engine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#ElectricEngine"
+  }, {
+    "@id" : "http://vehiclegoodrelations.org/#ThermalEngine"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/hasMaxDeliveryRadius",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne le rayon max autour de l'entrepôt dans lequel on peut effectuer une livraison"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#DeliveryRange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has max delivery radius"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ]
+}, {
+  "@id" : "http://vehiclegoodrelations.org/hasPaymentFrequency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Donne la fréquence de paiement pour un payement en plusieurs fois en nombre de jours."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://vehiclegoodrelations.org/#PayInFourMethod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has payment frequency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/goodrelations/v1#QuantitativeValue"
+  } ]
+} ]

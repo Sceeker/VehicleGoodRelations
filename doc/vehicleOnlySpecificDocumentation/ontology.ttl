@@ -1,0 +1,648 @@
+@prefix : <http://vehiclegoodrelations.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://vehiclegoodrelations.org/> .
+
+<http://vehiclegoodrelations.org/> rdf:type owl:Ontology ;
+                                    owl:imports <http://purl.org/goodrelations/v1> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/goodrelations/v1#acceptedPaymentMethods
+<http://purl.org/goodrelations/v1#acceptedPaymentMethods> rdfs:domain <http://vehiclegoodrelations.org/#PayInFourMethod> .
+
+
+###  http://purl.org/goodrelations/v1#hasPriceSpecification
+<http://purl.org/goodrelations/v1#hasPriceSpecification> rdfs:domain <http://purl.org/goodrelations/v1#DeliveryMethod> .
+
+
+###  http://vehiclegoodrelations.org/hasEngine
+:hasEngine rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://vehiclegoodrelations.org/#HydridEngine> ;
+           rdfs:range <http://vehiclegoodrelations.org/#ElectricEngine> ,
+                      <http://vehiclegoodrelations.org/#ThermalEngine> ;
+           rdfs:comment "Indiuque qu'un moteur hybride est constitué d'un moteur électrique et d'un moteur thermique" ;
+           rdfs:label "has engine" .
+
+
+###  http://vehiclegoodrelations.org/hasMaxDeliveryRadius
+:hasMaxDeliveryRadius rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://vehiclegoodrelations.org/#DeliveryRange> ;
+                      rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                      rdfs:comment "Donne le rayon max autour de l'entrepôt dans lequel on peut effectuer une livraison" ;
+                      rdfs:label "has max delivery radius" .
+
+
+###  http://vehiclegoodrelations.org/hasPaymentFrequency
+:hasPaymentFrequency rdf:type owl:ObjectProperty ;
+                     rdfs:domain <http://vehiclegoodrelations.org/#PayInFourMethod> ;
+                     rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                     rdfs:comment "Donne la fréquence de paiement pour un payement en plusieurs fois en nombre de jours." ;
+                     rdfs:label "has payment frequency" .
+
+
+###  http://vehiclegoodrelations.org/#capacity
+<http://vehiclegoodrelations.org/#capacity> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                            rdfs:domain <http://vehiclegoodrelations.org/#EnergySource> ;
+                                            rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                            rdfs:comment "Donne la capacité de charge ou en essence/diesel" ;
+                                            rdfs:label "capacity" .
+
+
+###  http://vehiclegoodrelations.org/#cylinderCapacity
+<http://vehiclegoodrelations.org/#cylinderCapacity> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                                    rdfs:domain <http://vehiclegoodrelations.org/#ThermalEngine> ;
+                                                    rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                                    rdfs:comment "Donne la cylindrée du moteur" ;
+                                                    rdfs:label "cylinder capacity" .
+
+
+###  http://vehiclegoodrelations.org/#cylinderCount
+<http://vehiclegoodrelations.org/#cylinderCount> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                                 rdfs:domain <http://vehiclegoodrelations.org/#ThermalEngine> ;
+                                                 rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                                 rdfs:comment "Donne le nombre de cylindres du moteur" ;
+                                                 rdfs:label "cylinder count" .
+
+
+###  http://vehiclegoodrelations.org/#deliveryOrigin
+<http://vehiclegoodrelations.org/#deliveryOrigin> rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "delivery origin" .
+
+
+###  http://vehiclegoodrelations.org/#eachPaymentIs
+<http://vehiclegoodrelations.org/#eachPaymentIs> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://vehiclegoodrelations.org/#PayInFourMethod> ;
+                                                 rdfs:range <http://purl.org/goodrelations/v1#UnitPriceSpecification> ;
+                                                 rdfs:comment "Donne les informations relatives à chaque paiement à effectuer pour payer en plusieurs fois." ;
+                                                 rdfs:label "each payment is" .
+
+
+###  http://vehiclegoodrelations.org/#gearsCount
+<http://vehiclegoodrelations.org/#gearsCount> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                              rdfs:domain <http://vehiclegoodrelations.org/#Gearbox> ;
+                                              rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                              rdfs:comment "Donne le nombre de rapport de la boîte de vitesse" ;
+                                              rdfs:label "gears count" .
+
+
+###  http://vehiclegoodrelations.org/#hasDeliveryRange
+<http://vehiclegoodrelations.org/#hasDeliveryRange> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://purl.org/goodrelations/v1#DeliveryMethod> ;
+                                                    rdfs:range <http://vehiclegoodrelations.org/#DeliveryRange> ;
+                                                    rdfs:comment "Relie la classe Delivery Range qui contient la propriété du rayon maximal de livraison à la classe delivery method" ;
+                                                    rdfs:label "has delivery range" .
+
+
+###  http://vehiclegoodrelations.org/#hasFuelType
+<http://vehiclegoodrelations.org/#hasFuelType> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <http://vehiclegoodrelations.org/#ThermalEngine> ;
+                                               rdfs:range <http://vehiclegoodrelations.org/#FuelType> ;
+                                               rdfs:comment "Spécifie le type de carburant du moteur thermique" ;
+                                               rdfs:label "has fuel type" .
+
+
+###  http://vehiclegoodrelations.org/#hasVehicleSpecs
+<http://vehiclegoodrelations.org/#hasVehicleSpecs> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://vehiclegoodrelations.org/#Vehicle> ;
+                                                   rdfs:range <http://vehiclegoodrelations.org/#VehicleSpecs> ;
+                                                   rdfs:comment "Donne les spécifications du véhicule en liant les classes vehicle et vehicleSpecs" ;
+                                                   rdfs:label "has vehicle specs" .
+
+
+###  http://vehiclegoodrelations.org/#has_energySource
+<http://vehiclegoodrelations.org/#has_energySource> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://vehiclegoodrelations.org/#ElectricEngine> ,
+                                                                <http://vehiclegoodrelations.org/#HydridEngine> ,
+                                                                <http://vehiclegoodrelations.org/#ThermalEngine> ;
+                                                    rdfs:range <http://vehiclegoodrelations.org/#EnergySource> ;
+                                                    rdfs:comment "Précise le type d'énergie utilisé par les moteurs" ;
+                                                    rdfs:label "has energy source" .
+
+
+###  http://vehiclegoodrelations.org/#mass
+<http://vehiclegoodrelations.org/#mass> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                        rdfs:domain [ rdf:type owl:Class ;
+                                                      owl:unionOf ( <http://purl.org/goodrelations/v1#ProductOrService>
+                                                                    <http://schema.org/Product>
+                                                                  )
+                                                    ] ;
+                                        rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                        rdfs:comment "Donne la masse du produit" ;
+                                        rdfs:label "mass" .
+
+
+###  http://vehiclegoodrelations.org/#power
+<http://vehiclegoodrelations.org/#power> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                         rdfs:domain <http://vehiclegoodrelations.org/#EngineSpecs> ,
+                                                     <http://vehiclegoodrelations.org/#SoundSystem> ;
+                                         rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                         rdfs:comment "Donne la puissance du moteur et du système audio" ;
+                                         rdfs:label "power" .
+
+
+###  http://vehiclegoodrelations.org/#radius
+<http://vehiclegoodrelations.org/#radius> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                          rdfs:domain <http://vehiclegoodrelations.org/#DeliveryRange> ;
+                                          rdfs:range <http://purl.org/goodrelations/v1#DeliveryMethod> ;
+                                          rdfs:label "radius" .
+
+
+###  http://vehiclegoodrelations.org/#torque
+<http://vehiclegoodrelations.org/#torque> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                          rdfs:domain <http://vehiclegoodrelations.org/#EngineSpecs> ;
+                                          rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                          rdfs:comment "Donne le couple du moteur" ;
+                                          rdfs:label "torque" .
+
+
+###  http://vehiclegoodrelations.org/#valveCount
+<http://vehiclegoodrelations.org/#valveCount> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> ;
+                                              rdfs:domain <http://vehiclegoodrelations.org/#ThermalEngine> ;
+                                              rdfs:range <http://purl.org/goodrelations/v1#QuantitativeValue> ;
+                                              rdfs:comment "Donne le nombre de vavle du moteur" ;
+                                              rdfs:label "valve count" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://vehiclegoodrelations.org/deliveryServedCountry
+:deliveryServedCountry rdf:type owl:DatatypeProperty ;
+                       rdfs:domain <http://vehiclegoodrelations.org/#DeliveryRange> ;
+                       rdfs:range xsd:anyURI ;
+                       rdfs:comment "Indique les pays qui peuvent être livrés en se référant à leur URI." ;
+                       rdfs:label "delivery served country" .
+
+
+###  http://vehiclegoodrelations.org/#has_camera
+<http://vehiclegoodrelations.org/#has_camera> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://vehiclegoodrelations.org/#ProximitySensing> ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:comment "Indique si le système de proximity sensing est pourvu d'une caméra de recul" ;
+                                              rdfs:label "has camera" .
+
+
+###  http://vehiclegoodrelations.org/#has_cruiseControl
+<http://vehiclegoodrelations.org/#has_cruiseControl> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://vehiclegoodrelations.org/#SpeedControl> ;
+                                                     rdfs:range xsd:boolean ;
+                                                     rdfs:comment "Indique si le système de régulation de la vitesse à le cruise control." ;
+                                                     rdfs:label "has cruise control" .
+
+
+###  http://vehiclegoodrelations.org/#has_frontSensors
+<http://vehiclegoodrelations.org/#has_frontSensors> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://vehiclegoodrelations.org/#ProximitySensing> ;
+                                                    rdfs:range xsd:boolean ;
+                                                    rdfs:comment "Indique s'il y a des capteurs à l'avant" ;
+                                                    rdfs:label "has front sensors" .
+
+
+###  http://vehiclegoodrelations.org/#has_rearSensors
+<http://vehiclegoodrelations.org/#has_rearSensors> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://vehiclegoodrelations.org/#ProximitySensing> ;
+                                                   rdfs:range xsd:boolean ;
+                                                   rdfs:comment "Indique s'il y a des capteurs à l'arrière" ;
+                                                   rdfs:label "has rear sensors" .
+
+
+###  http://vehiclegoodrelations.org/#has_speedLimiter
+<http://vehiclegoodrelations.org/#has_speedLimiter> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://vehiclegoodrelations.org/#SpeedControl> ;
+                                                    rdfs:range xsd:boolean ;
+                                                    rdfs:comment "Indique si le système de régulation de la vitesse à le limiteur de vitesse." ;
+                                                    rdfs:label "has speed limiter" .
+
+
+###  http://vehiclegoodrelations.org/#has_traffic_information
+<http://vehiclegoodrelations.org/#has_traffic_information> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://vehiclegoodrelations.org/#GPS> ;
+                                                           rdfs:range xsd:boolean ;
+                                                           rdfs:comment "Indique si le gps est capable de connaître le traffic en temps réel" ;
+                                                           rdfs:label "has traffic information" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/goodrelations/v1#ProductOrService
+<http://purl.org/goodrelations/v1#ProductOrService> rdfs:subClassOf <http://purl.org/goodrelations/v1#Individual> .
+
+
+###  http://vehiclegoodrelations.org/Electricity
+:Electricity rdf:type owl:Class ;
+             rdfs:subClassOf <http://vehiclegoodrelations.org/#FuelType> .
+
+
+###  http://vehiclegoodrelations.org/#AllWheelDrive
+<http://vehiclegoodrelations.org/#AllWheelDrive> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://vehiclegoodrelations.org/#Transmission> ;
+                                                 rdfs:label "AllWheelDrive" .
+
+
+###  http://vehiclegoodrelations.org/#AsynchronousElectricEngine
+<http://vehiclegoodrelations.org/#AsynchronousElectricEngine> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://vehiclegoodrelations.org/#ElectricEngine> ;
+                                                              owl:disjointWith <http://vehiclegoodrelations.org/#SynchronousElectricEngine> ;
+                                                              rdfs:label "AsynchronousElelctricEngine" .
+
+
+###  http://vehiclegoodrelations.org/#AutoPilot
+<http://vehiclegoodrelations.org/#AutoPilot> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://vehiclegoodrelations.org/#DrivingHelp> ;
+                                             rdfs:label "AutoPilot" .
+
+
+###  http://vehiclegoodrelations.org/#AutomaticGearbox
+<http://vehiclegoodrelations.org/#AutomaticGearbox> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://vehiclegoodrelations.org/#Gearbox> ;
+                                                    owl:disjointWith <http://vehiclegoodrelations.org/#Manual> ;
+                                                    owl:priorVersion "AutomaticGearbox" .
+
+
+###  http://vehiclegoodrelations.org/#Battery
+<http://vehiclegoodrelations.org/#Battery> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://vehiclegoodrelations.org/#EnergySource> ;
+                                           owl:disjointWith <http://vehiclegoodrelations.org/#FuelTank> ;
+                                           rdfs:label "Battery" .
+
+
+###  http://vehiclegoodrelations.org/#ClothInterior
+<http://vehiclegoodrelations.org/#ClothInterior> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://vehiclegoodrelations.org/#Interior> ;
+                                                 rdfs:label "ClothInterior" .
+
+
+###  http://vehiclegoodrelations.org/#DeliveryRange
+<http://vehiclegoodrelations.org/#DeliveryRange> rdf:type owl:Class .
+
+
+###  http://vehiclegoodrelations.org/#Diesel
+<http://vehiclegoodrelations.org/#Diesel> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://vehiclegoodrelations.org/#FuelType> ;
+                                          rdfs:label "Diesel" .
+
+
+###  http://vehiclegoodrelations.org/#DrivingHelp
+<http://vehiclegoodrelations.org/#DrivingHelp> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleOptions> ;
+                                               rdfs:comment "Donne les aides à la conduite disponibles. (GPS, radar de recul, etc)" ;
+                                               rdfs:label "DrivingHelp" .
+
+
+###  http://vehiclegoodrelations.org/#DrivingSide
+<http://vehiclegoodrelations.org/#DrivingSide> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleSpecs> ;
+                                               rdfs:comment "Spécifie le sens de circulation qui a été prévu pour la voiture." ;
+                                               rdfs:label "DrivingSide" .
+
+
+###  http://vehiclegoodrelations.org/#ElectricEngine
+<http://vehiclegoodrelations.org/#ElectricEngine> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://vehiclegoodrelations.org/#EngineSpecs> ;
+                                                  rdfs:comment "Cette classe donne le type de moteur électrique utilisé" ;
+                                                  rdfs:label "ElectricEngine" .
+
+
+###  http://vehiclegoodrelations.org/#EnergySource
+<http://vehiclegoodrelations.org/#EnergySource> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleSpecs> ;
+                                                rdfs:comment "Cette classe permet de spéficier quelle ressource le véhicue utilise pour avancer." ;
+                                                rdfs:label "EnergySource" .
+
+
+###  http://vehiclegoodrelations.org/#EngineSpecs
+<http://vehiclegoodrelations.org/#EngineSpecs> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleSpecs> ;
+                                               rdfs:comment "Cette classe donne des spécifications sur le moteur. A savoir son type (électrique, thermique, hybride) et s'il utilise du diesel ou de l'essence" ;
+                                               rdfs:label "EngineSpecs" .
+
+
+###  http://vehiclegoodrelations.org/#FrontWheelDrive
+<http://vehiclegoodrelations.org/#FrontWheelDrive> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://vehiclegoodrelations.org/#Transmission> ;
+                                                   rdfs:label "FrontWheelDrive" .
+
+
+###  http://vehiclegoodrelations.org/#FuelTank
+<http://vehiclegoodrelations.org/#FuelTank> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://vehiclegoodrelations.org/#EnergySource> ;
+                                            rdfs:label "FuelTank" .
+
+
+###  http://vehiclegoodrelations.org/#FuelType
+<http://vehiclegoodrelations.org/#FuelType> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://vehiclegoodrelations.org/#EngineSpecs> ;
+                                            rdfs:comment "Donne le type de combustible utilisé par le moteur" ;
+                                            rdfs:label "FuelType" .
+
+
+###  http://vehiclegoodrelations.org/#GPS
+<http://vehiclegoodrelations.org/#GPS> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://vehiclegoodrelations.org/#DrivingHelp> ;
+                                       rdfs:label "GPS" .
+
+
+###  http://vehiclegoodrelations.org/#Gasoline
+<http://vehiclegoodrelations.org/#Gasoline> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://vehiclegoodrelations.org/#FuelType> ;
+                                            rdfs:label "Gasoline" .
+
+
+###  http://vehiclegoodrelations.org/#Gearbox
+<http://vehiclegoodrelations.org/#Gearbox> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleSpecs> ;
+                                           rdfs:comment "Donne les spécifications de la boite de vitesses, par exemple si elle est automatique ou manuelle, et son nombre de rapports via une data property." ;
+                                           rdfs:label "Gearbox" .
+
+
+###  http://vehiclegoodrelations.org/#Hallogen
+<http://vehiclegoodrelations.org/#Hallogen> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://vehiclegoodrelations.org/#Lights> ;
+                                            rdfs:label "Hallogen" .
+
+
+###  http://vehiclegoodrelations.org/#HydridEngine
+<http://vehiclegoodrelations.org/#HydridEngine> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://vehiclegoodrelations.org/#EngineSpecs> ;
+                                                rdfs:label "HybridEngine" .
+
+
+###  http://vehiclegoodrelations.org/#Interior
+<http://vehiclegoodrelations.org/#Interior> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleOptions> ;
+                                            rdfs:comment "Donne les options de finitions intérieur des sièges" ;
+                                            rdfs:label "Interior" .
+
+
+###  http://vehiclegoodrelations.org/#Laser
+<http://vehiclegoodrelations.org/#Laser> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://vehiclegoodrelations.org/#Lights> ;
+                                         rdfs:label "Laser" .
+
+
+###  http://vehiclegoodrelations.org/#LeatherInterior
+<http://vehiclegoodrelations.org/#LeatherInterior> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://vehiclegoodrelations.org/#Interior> ;
+                                                   rdfs:label "LeatherInterior" .
+
+
+###  http://vehiclegoodrelations.org/#Led
+<http://vehiclegoodrelations.org/#Led> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://vehiclegoodrelations.org/#Lights> ;
+                                       rdfs:label "Led" .
+
+
+###  http://vehiclegoodrelations.org/#LeftDrivingSide
+<http://vehiclegoodrelations.org/#LeftDrivingSide> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://vehiclegoodrelations.org/#DrivingSide> ;
+                                                   owl:disjointWith <http://vehiclegoodrelations.org/#Right> ;
+                                                   rdfs:comment "Signifie que le volant est à droite pour une conduite à gauche" ;
+                                                   rdfs:label "LeftDrivingSide" .
+
+
+###  http://vehiclegoodrelations.org/#Lights
+<http://vehiclegoodrelations.org/#Lights> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleOptions> ;
+                                          rdfs:comment "Donne les options concernant les phares de la voiture" ;
+                                          rdfs:label "Lights" .
+
+
+###  http://vehiclegoodrelations.org/#Manual
+<http://vehiclegoodrelations.org/#Manual> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://vehiclegoodrelations.org/#Gearbox> ;
+                                          rdfs:label "ManualGearbox" .
+
+
+###  http://vehiclegoodrelations.org/#PayInFourMethod
+<http://vehiclegoodrelations.org/#PayInFourMethod> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.org/goodrelations/v1#PaymentMethod> ;
+                                                   rdfs:label "PayInFourMethod" .
+
+
+###  http://vehiclegoodrelations.org/#ProximitySensing
+<http://vehiclegoodrelations.org/#ProximitySensing> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://vehiclegoodrelations.org/#DrivingHelp> ;
+                                                    rdfs:label "ProximitySensing" .
+
+
+###  http://vehiclegoodrelations.org/#RearWheelDrive
+<http://vehiclegoodrelations.org/#RearWheelDrive> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://vehiclegoodrelations.org/#Transmission> ;
+                                                  rdfs:label "RearWheelDrive" .
+
+
+###  http://vehiclegoodrelations.org/#Right
+<http://vehiclegoodrelations.org/#Right> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://vehiclegoodrelations.org/#DrivingSide> ;
+                                         rdfs:comment "Signifie que le volant est à gauche pour une conduite à droite" ;
+                                         rdfs:label "RightDrivingSide" .
+
+
+###  http://vehiclegoodrelations.org/#SoundSystem
+<http://vehiclegoodrelations.org/#SoundSystem> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleOptions> ;
+                                               rdfs:comment "Donne les options possible en terme de système audio" ;
+                                               rdfs:label "SoundSystem" .
+
+
+###  http://vehiclegoodrelations.org/#SpeedControl
+<http://vehiclegoodrelations.org/#SpeedControl> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://vehiclegoodrelations.org/#DrivingHelp> ;
+                                                rdfs:label "SpeedControl" .
+
+
+###  http://vehiclegoodrelations.org/#SynchronousElectricEngine
+<http://vehiclegoodrelations.org/#SynchronousElectricEngine> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://vehiclegoodrelations.org/#ElectricEngine> ;
+                                                             rdfs:label "SynchronousElectricEngine" .
+
+
+###  http://vehiclegoodrelations.org/#ThermalEngine
+<http://vehiclegoodrelations.org/#ThermalEngine> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://vehiclegoodrelations.org/#EngineSpecs> ;
+                                                 rdfs:label "ThermalEngine" .
+
+
+###  http://vehiclegoodrelations.org/#Transmission
+<http://vehiclegoodrelations.org/#Transmission> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleSpecs> ;
+                                                rdfs:comment "Donne les différentes transmissions possibles pour la voiture. (Traction, Propulsion, 4x4)" ;
+                                                rdfs:label "Transmission" .
+
+
+###  http://vehiclegoodrelations.org/#Vehicle
+<http://vehiclegoodrelations.org/#Vehicle> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.org/goodrelations/v1#ProductOrService> ;
+                                           rdfs:comment "Cette classe représente les voitures proposées par l'entreprise" ;
+                                           rdfs:label "Vehicle" .
+
+
+###  http://vehiclegoodrelations.org/#VehicleOptions
+<http://vehiclegoodrelations.org/#VehicleOptions> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://vehiclegoodrelations.org/#VehicleSpecs> ;
+                                                  rdfs:comment "Cette classe contient les options que l'acheteur peut choisir de rajouter au moment de l'achat." ;
+                                                  rdfs:label "VehicleOptions" .
+
+
+###  http://vehiclegoodrelations.org/#VehicleSpecs
+<http://vehiclegoodrelations.org/#VehicleSpecs> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://purl.org/goodrelations/v1#ProductOrService> ;
+                                                rdfs:comment "Contient les sousclasses permettant de préciser les spécifications de la voiture." ;
+                                                rdfs:label "VehicleSpecs" .
+
+
+###  http://vehiclegoodrelations.org/#VelvetInterior
+<http://vehiclegoodrelations.org/#VelvetInterior> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://vehiclegoodrelations.org/#Interior> ;
+                                                  owl:incompatibleWith "VelvetInterior" .
+
+
+###  http://vehiclegoodrelations.org/#Xenon
+<http://vehiclegoodrelations.org/#Xenon> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://vehiclegoodrelations.org/#Lights> ;
+                                         rdfs:label "Xenon" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vehiclegoodrelations.org/#DeliveryModeHome
+<http://vehiclegoodrelations.org/#DeliveryModeHome> rdf:type owl:NamedIndividual ,
+                                                             <http://purl.org/goodrelations/v1#DeliveryMethod> ;
+                                                    rdfs:comment "Livraison par une société de livraison." ;
+                                                    rdfs:label "Delivery mode home" .
+
+
+###  http://vehiclegoodrelations.org/#Focal
+<http://vehiclegoodrelations.org/#Focal> rdf:type owl:NamedIndividual ,
+                                                  <http://vehiclegoodrelations.org/#SoundSystem> ;
+                                         rdfs:comment "Des enceintes fournies par la marque Focal." ;
+                                         rdfs:label "Focal" .
+
+
+###  http://vehiclegoodrelations.org/#JBL
+<http://vehiclegoodrelations.org/#JBL> rdf:type owl:NamedIndividual ,
+                                                <http://vehiclegoodrelations.org/#SoundSystem> ;
+                                       rdfs:comment "Des enceintes fournies par la marque JBL." ;
+                                       rdfs:label "JBL" .
+
+
+###  http://vehiclegoodrelations.org/#Pioneer
+<http://vehiclegoodrelations.org/#Pioneer> rdf:type owl:NamedIndividual ,
+                                                    <http://vehiclegoodrelations.org/#SoundSystem> ;
+                                           rdfs:comment "Des enceintes fournies par la marque Pioneer." ;
+                                           rdfs:label "Pioneer" .
+
+
+###  http://vehiclegoodrelations.org/#Sony
+<http://vehiclegoodrelations.org/#Sony> rdf:type owl:NamedIndividual ,
+                                                 <http://vehiclegoodrelations.org/#SoundSystem> ;
+                                        rdfs:comment "Des enceintes fournies par la marque Sony." ;
+                                        rdfs:label "Sony" .
+
+
+###  http://vehiclegoodrelations.org/#Bang&Olusfen
+<http://vehiclegoodrelations.org/#Bang&Olusfen> rdf:type owl:NamedIndividual ,
+                                                         <http://vehiclegoodrelations.org/#SoundSystem> ;
+                                                rdfs:comment "Des enceintes fournies par la marque Bang&Olusfen." ;
+                                                rdfs:label "Bang&Olusfen" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Electricity
+                <http://vehiclegoodrelations.org/#Diesel>
+                <http://vehiclegoodrelations.org/#Gasoline>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vehiclegoodrelations.org/#AllWheelDrive>
+                <http://vehiclegoodrelations.org/#FrontWheelDrive>
+                <http://vehiclegoodrelations.org/#RearWheelDrive>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vehiclegoodrelations.org/#AutoPilot>
+                <http://vehiclegoodrelations.org/#GPS>
+                <http://vehiclegoodrelations.org/#ProximitySensing>
+                <http://vehiclegoodrelations.org/#SpeedControl>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vehiclegoodrelations.org/#DrivingHelp>
+                <http://vehiclegoodrelations.org/#Interior>
+                <http://vehiclegoodrelations.org/#Lights>
+                <http://vehiclegoodrelations.org/#SoundSystem>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vehiclegoodrelations.org/#DrivingSide>
+                <http://vehiclegoodrelations.org/#EnergySource>
+                <http://vehiclegoodrelations.org/#EngineSpecs>
+                <http://vehiclegoodrelations.org/#Gearbox>
+                <http://vehiclegoodrelations.org/#Transmission>
+                <http://vehiclegoodrelations.org/#VehicleOptions>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vehiclegoodrelations.org/#ElectricEngine>
+                <http://vehiclegoodrelations.org/#FuelType>
+                <http://vehiclegoodrelations.org/#HydridEngine>
+                <http://vehiclegoodrelations.org/#ThermalEngine>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vehiclegoodrelations.org/#EnergySource>
+                <http://vehiclegoodrelations.org/#EngineSpecs>
+                <http://vehiclegoodrelations.org/#Gearbox>
+                <http://vehiclegoodrelations.org/#Transmission>
+                <http://vehiclegoodrelations.org/#VehicleOptions>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vehiclegoodrelations.org/#Hallogen>
+                <http://vehiclegoodrelations.org/#Laser>
+                <http://vehiclegoodrelations.org/#Led>
+                <http://vehiclegoodrelations.org/#Xenon>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

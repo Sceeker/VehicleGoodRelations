@@ -1,0 +1,149 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vgr: <http://vehiclegoodrelations.org/>
+PREFIX schema: <http://schema.org/>
+
+<https://www.voitures.cool/> a vgr:BusinessEntity ;
+    vgr:legalName "Voitures Cool Ltd." ;
+	vgr:category "Automobile"^^xsd:string ;
+    vgr:description "Voitures Cool Ltd. fabrique et vend des voitures de la plus haute qualité, c'est la French Touch." ;
+	vgr:hasAddress [ a vgr:PostalAddress ;
+		vgr:streetAddress "1337 Rue de l'Étalon" ;
+		vgr:postalCode "42100" ;
+		vgr:addressLocality "Saint-Étienne" ;
+		vgr:addressRegion "Auvergne-Rhône-Alpes" ;
+		vgr:addressCountry "FRACE" ; ] ;
+	vgr:offers <voiture_thermique> ;
+	vgr:offers <voiture_hybride> ;
+	schema:keywords "voiture", "voitures", "cool", "livraison" ;
+    schema:url "https://www.voitures.cool/" .
+
+<voiture_thermique> a vgr:Offering ;
+	vgr:name "Voiture thermique" ;
+	vgr:description "Une voiture thermique haute performance, pour rouler, encore et encore !"^^xsd:string ;
+	vgr:hasBusinessFunction vgr:Sell ;
+	vgr:hasPriceSpecification [ a vgr:UnitPriceSpecification ;
+		vgr:hasCurrency "EUR"^^xsd:string ;
+		vgr:hasCurrencyValue "29000.00"^^xsd:float ; ] ;
+	vgr:acceptedPaymentMethods
+		vgr:MasterCard,
+		vgr:VISA;
+	vgr:condition "new" ;
+	vgr:hasDeliveryMethod [ a vgr:DeliveryMethod ;
+		vgr:name "Livraison" ;
+		vgr:deliveryTime [ a vgr:QuantitativeValue ;
+			vgr:unitCode "DAY" ;
+			vgr:value "4" ; ] ;
+        vgr:deliveryChargeSpecification [
+			a vgr:DeliveryChargeSpecification ;
+			vgr:hasCurrency "EUR" ;
+			vgr:hasCurrencyValue "200.00"^^xsd:float ;
+			vgr:appliesToDeliveryMethod vgr:DeliveryModeHome ; ] ; ] ;
+	vgr:includes [ a vgr:Vehicle ;
+		vgr:name "Voiture thermique diesel"^^xsd:string ;
+		vgr:hasVehicleSpecs
+			vgr:LeftDrivingSide ,
+			[ a vgr:ThermalEngine ;
+				vgr:cylinderCapacity [ a  vgr:QuantitativeValue ;
+					vgr:hasValue "8"^^xsd:float ; ] ;
+				vgr:hasEnergySource [ a vgr:FuelTank ;
+					vgr:capacity [ a  vgr:QuantitativeValue ;
+					vgr:hasValue "50"^^xsd:float ;
+					vgr:hasUnitOfMeasurement "Liters"^^xsd:string ; ] ; ] ;
+				vgr:hasFuelType vgr:Diesel;
+				vgr:power [ a  vgr:QuantitativeValue ;
+					vgr:hasValue "400"^^xsd:float ;
+					vgr:hasUnitOfMeasurement "Horse Power"^^xsd:string ; ] ;
+				vgr:torque [ a  vgr:QuantitativeValue ;
+					vgr:hasValue "279"^^xsd:float ;
+					vgr:hasUnitOfMeasurement "Nm"^^xsd:string ; ] ;
+				vgr:valveCount [ a  vgr:QuantitativeValue ;
+					vgr:hasValue "32"^^xsd:float ; ] ; ] ,
+			[ a vgr:ManualGearbox ;
+				vgr:gearsCount [ a  vgr:QuantitativeValue ;
+					vgr:hasValue "7"^^xsd:float ; ] ; ] ,
+			vgr:AllWheelDrive,
+			vgr:AutoPilot,
+			[ a vgr:ProximitySensing ;
+				vgr:has_camera true;
+				vgr:has_rearSensors true;
+				vgr:has_frontSensors true ; ] ,
+			vgr:VelvetInterior,
+			[ vgr:SoundSystem vgr:JBL ] ; ] .
+		
+<voiture_hybride> a vgr:Offering ;
+	vgr:name "Voiture hybride" ;
+	vgr:description "Une voiture hybride, un compris pour rouler sans abimer la planète !"^^xsd:string ;
+	vgr:hasBusinessFunction vgr:Sell ;
+	vgr:hasPriceSpecification [ a vgr:UnitPriceSpecification ;
+		vgr:hasCurrency "EUR"^^xsd:string ;
+		vgr:hasCurrencyValue "29000.00"^^xsd:float ; ] ;
+	vgr:acceptedPaymentMethods [ a vgr:PayInFourMethod ;
+		vgr:hasPaymentFrequency [ a  vgr:QuantitativeValue ;
+			vgr:hasValue "31"^^xsd:positiveInteger ;
+			vgr:hasUnitOfMeasurement "days"^^xsd:string ; ] ;
+		vgr:acceptedPaymentMethods
+			vgr:MasterCard,
+			vgr:VISA;
+		vgr:eachPaymentIs [ a vgr:UnitPriceSpecification ;
+			vgr:hasCurrency "EUR"^^xsd:string ;
+			vgr:hasCurrencyValue "7250.00"^^xsd:float ; ] ; ] ;
+	vgr:condition "new" ;
+	vgr:hasDeliveryMethod [ a vgr:DeliveryMethod ;
+		vgr:name "Livraison" ;
+		vgr:deliveryTime [ a vgr:QuantitativeValue ;
+			vgr:unitCode "DAY" ;
+			vgr:value "2" ; ] ;
+        vgr:deliveryChargeSpecification [
+			a vgr:DeliveryChargeSpecification ;
+			vgr:hasCurrency "EUR" ;
+			vgr:hasCurrencyValue "100.00"^^xsd:float ;
+			vgr:appliesToDeliveryMethod vgr:DeliveryModeHome ; ] ;
+		vgr:hasDeliveryRange [ a vgr:DeliveryRange ;
+			vgr:hasMaxDeliveryRange [ a  vgr:QuantitativeValue ;
+				vgr:hasValue "100"^^xsd:positiveInteger ;
+				vgr:hasUnitOfMeasurement "kilometers"^^xsd:string ; ] ;
+			vgr:deliveryServedCountry "FR"^^xsd:string ; ] ;
+	vgr:includes [ a vgr:Vehicle ;
+		vgr:name "Voiture hybride essence"^^xsd:string ;
+		vgr:hasVehicleSpecs
+			vgr:RightDrivingSide ,
+			[ a vgr:HybridEngine;
+				vgr:hasEngine [ a vgr:ThermalEngine ;
+						vgr:cylinderCapacity [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "4"^^xsd:float ; ] ;
+						vgr:hasEnergySource [ a vgr:FuelTank ;
+							vgr:capacity [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "20"^^xsd:float ;
+							vgr:hasUnitOfMeasurement "Liters"^^xsd:string ; ] ; ] ;
+						vgr:hasFuelType vgr:Gasoline;
+						vgr:power [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "75"^^xsd:float ;
+							vgr:hasUnitOfMeasurement "Horse Power"^^xsd:string ; ] ;
+						vgr:torque [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "100"^^xsd:float ;
+							vgr:hasUnitOfMeasurement "Nm"^^xsd:string ; ] ;
+						vgr:valveCount [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "8"^^xsd:float ; ] ; ] ,
+					[ a vgr:AsynchronousElectricEngine ;
+						vgr:hasEnergySource [ a vgr:Battery ;
+							vgr:capacity [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "80"^^xsd:float ;
+							vgr:hasUnitOfMeasurement "kWh"^^xsd:string ; ] ; ] ;
+						vgr:hasFuelType vgr:Electricity;
+						vgr:power [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "300"^^xsd:float ;
+							vgr:hasUnitOfMeasurement "Horse Power"^^xsd:string ; ] ;
+						vgr:torque [ a  vgr:QuantitativeValue ;
+							vgr:hasValue "413"^^xsd:float ;
+							vgr:hasUnitOfMeasurement "Nm"^^xsd:string ; ] ; ] ; ] ,
+			[ a vgr:ManualGearbox ;
+				vgr:gearsCount [ a  vgr:QuantitativeValue ;
+					vgr:hasValue "7"^^xsd:float ; ] ; ] ,
+			vgr:AllWheelDrive,
+			vgr:AutoPilot,
+			[ a vgr:ProximitySensing ;
+				vgr:has_camera true;
+				vgr:has_rearSensors true;
+				vgr:has_frontSensors true ; ] ,
+			vgr:VelvetInterior,
+			[ vgr:SoundSystem vgr:JBL ] ; ] ; ] .

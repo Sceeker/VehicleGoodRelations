@@ -1,0 +1,641 @@
+<http://vehiclegoodrelations.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vehiclegoodrelations.org/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/goodrelations/v1#acceptedPaymentMethods
+<http://purl.org/goodrelations/v1#acceptedPaymentMethods> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#PayInFourMethod> .
+# 
+# http://purl.org/goodrelations/v1#hasPriceSpecification
+<http://purl.org/goodrelations/v1#hasPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#DeliveryMethod> .
+# 
+# http://vehiclegoodrelations.org/hasEngine
+<http://vehiclegoodrelations.org/hasEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/hasEngine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#HydridEngine> .
+<http://vehiclegoodrelations.org/hasEngine> <http://www.w3.org/2000/01/rdf-schema#range> <http://vehiclegoodrelations.org/#ElectricEngine> .
+<http://vehiclegoodrelations.org/hasEngine> <http://www.w3.org/2000/01/rdf-schema#range> <http://vehiclegoodrelations.org/#ThermalEngine> .
+<http://vehiclegoodrelations.org/hasEngine> <http://www.w3.org/2000/01/rdf-schema#comment> "Indiuque qu'un moteur hybride est constitué d'un moteur électrique et d'un moteur thermique" .
+<http://vehiclegoodrelations.org/hasEngine> <http://www.w3.org/2000/01/rdf-schema#label> "has engine" .
+# 
+# http://vehiclegoodrelations.org/hasMaxDeliveryRadius
+<http://vehiclegoodrelations.org/hasMaxDeliveryRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/hasMaxDeliveryRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#DeliveryRange> .
+<http://vehiclegoodrelations.org/hasMaxDeliveryRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/hasMaxDeliveryRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne le rayon max autour de l'entrepôt dans lequel on peut effectuer une livraison" .
+<http://vehiclegoodrelations.org/hasMaxDeliveryRadius> <http://www.w3.org/2000/01/rdf-schema#label> "has max delivery radius" .
+# 
+# http://vehiclegoodrelations.org/hasPaymentFrequency
+<http://vehiclegoodrelations.org/hasPaymentFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/hasPaymentFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#PayInFourMethod> .
+<http://vehiclegoodrelations.org/hasPaymentFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/hasPaymentFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne la fréquence de paiement pour un payement en plusieurs fois en nombre de jours." .
+<http://vehiclegoodrelations.org/hasPaymentFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "has payment frequency" .
+# 
+# http://vehiclegoodrelations.org/#capacity
+<http://vehiclegoodrelations.org/#capacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#capacity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#capacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#EnergySource> .
+<http://vehiclegoodrelations.org/#capacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#capacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne la capacité de charge ou en essence/diesel" .
+<http://vehiclegoodrelations.org/#capacity> <http://www.w3.org/2000/01/rdf-schema#label> "capacity" .
+# 
+# http://vehiclegoodrelations.org/#cylinderCapacity
+<http://vehiclegoodrelations.org/#cylinderCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#cylinderCapacity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#cylinderCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ThermalEngine> .
+<http://vehiclegoodrelations.org/#cylinderCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#cylinderCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne la cylindrée du moteur" .
+<http://vehiclegoodrelations.org/#cylinderCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "cylinder capacity" .
+# 
+# http://vehiclegoodrelations.org/#cylinderCount
+<http://vehiclegoodrelations.org/#cylinderCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#cylinderCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#cylinderCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ThermalEngine> .
+<http://vehiclegoodrelations.org/#cylinderCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#cylinderCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne le nombre de cylindres du moteur" .
+<http://vehiclegoodrelations.org/#cylinderCount> <http://www.w3.org/2000/01/rdf-schema#label> "cylinder count" .
+# 
+# http://vehiclegoodrelations.org/#deliveryOrigin
+<http://vehiclegoodrelations.org/#deliveryOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#deliveryOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "delivery origin" .
+# 
+# http://vehiclegoodrelations.org/#eachPaymentIs
+<http://vehiclegoodrelations.org/#eachPaymentIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#eachPaymentIs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#PayInFourMethod> .
+<http://vehiclegoodrelations.org/#eachPaymentIs> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#UnitPriceSpecification> .
+<http://vehiclegoodrelations.org/#eachPaymentIs> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les informations relatives à chaque paiement à effectuer pour payer en plusieurs fois." .
+<http://vehiclegoodrelations.org/#eachPaymentIs> <http://www.w3.org/2000/01/rdf-schema#label> "each payment is" .
+# 
+# http://vehiclegoodrelations.org/#gearsCount
+<http://vehiclegoodrelations.org/#gearsCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#gearsCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#gearsCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#Gearbox> .
+<http://vehiclegoodrelations.org/#gearsCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#gearsCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne le nombre de rapport de la boîte de vitesse" .
+<http://vehiclegoodrelations.org/#gearsCount> <http://www.w3.org/2000/01/rdf-schema#label> "gears count" .
+# 
+# http://vehiclegoodrelations.org/#hasDeliveryRange
+<http://vehiclegoodrelations.org/#hasDeliveryRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#hasDeliveryRange> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#DeliveryMethod> .
+<http://vehiclegoodrelations.org/#hasDeliveryRange> <http://www.w3.org/2000/01/rdf-schema#range> <http://vehiclegoodrelations.org/#DeliveryRange> .
+<http://vehiclegoodrelations.org/#hasDeliveryRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Relie la classe Delivery Range qui contient la propriété du rayon maximal de livraison à la classe delivery method" .
+<http://vehiclegoodrelations.org/#hasDeliveryRange> <http://www.w3.org/2000/01/rdf-schema#label> "has delivery range" .
+# 
+# http://vehiclegoodrelations.org/#hasFuelType
+<http://vehiclegoodrelations.org/#hasFuelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#hasFuelType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://vehiclegoodrelations.org/#hasFuelType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ThermalEngine> .
+<http://vehiclegoodrelations.org/#hasFuelType> <http://www.w3.org/2000/01/rdf-schema#range> <http://vehiclegoodrelations.org/#FuelType> .
+<http://vehiclegoodrelations.org/#hasFuelType> <http://www.w3.org/2000/01/rdf-schema#comment> "Spécifie le type de carburant du moteur thermique" .
+<http://vehiclegoodrelations.org/#hasFuelType> <http://www.w3.org/2000/01/rdf-schema#label> "has fuel type" .
+# 
+# http://vehiclegoodrelations.org/#hasVehicleSpecs
+<http://vehiclegoodrelations.org/#hasVehicleSpecs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#hasVehicleSpecs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#Vehicle> .
+<http://vehiclegoodrelations.org/#hasVehicleSpecs> <http://www.w3.org/2000/01/rdf-schema#range> <http://vehiclegoodrelations.org/#VehicleSpecs> .
+<http://vehiclegoodrelations.org/#hasVehicleSpecs> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les spécifications du véhicule en liant les classes vehicle et vehicleSpecs" .
+<http://vehiclegoodrelations.org/#hasVehicleSpecs> <http://www.w3.org/2000/01/rdf-schema#label> "has vehicle specs" .
+# 
+# http://vehiclegoodrelations.org/#has_energySource
+<http://vehiclegoodrelations.org/#has_energySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#has_energySource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ElectricEngine> .
+<http://vehiclegoodrelations.org/#has_energySource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#HydridEngine> .
+<http://vehiclegoodrelations.org/#has_energySource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ThermalEngine> .
+<http://vehiclegoodrelations.org/#has_energySource> <http://www.w3.org/2000/01/rdf-schema#range> <http://vehiclegoodrelations.org/#EnergySource> .
+<http://vehiclegoodrelations.org/#has_energySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Précise le type d'énergie utilisé par les moteurs" .
+<http://vehiclegoodrelations.org/#has_energySource> <http://www.w3.org/2000/01/rdf-schema#label> "has energy source" .
+# 
+# http://vehiclegoodrelations.org/#mass
+<http://vehiclegoodrelations.org/#mass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#mass> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#mass> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://schema.org/Product> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/goodrelations/v1#ProductOrService> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#mass> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#mass> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne la masse du produit" .
+<http://vehiclegoodrelations.org/#mass> <http://www.w3.org/2000/01/rdf-schema#label> "mass" .
+# 
+# http://vehiclegoodrelations.org/#power
+<http://vehiclegoodrelations.org/#power> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#power> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#power> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#EngineSpecs> .
+<http://vehiclegoodrelations.org/#power> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#SoundSystem> .
+<http://vehiclegoodrelations.org/#power> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#power> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne la puissance du moteur et du système audio" .
+<http://vehiclegoodrelations.org/#power> <http://www.w3.org/2000/01/rdf-schema#label> "power" .
+# 
+# http://vehiclegoodrelations.org/#radius
+<http://vehiclegoodrelations.org/#radius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#radius> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#radius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#DeliveryRange> .
+<http://vehiclegoodrelations.org/#radius> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#DeliveryMethod> .
+<http://vehiclegoodrelations.org/#radius> <http://www.w3.org/2000/01/rdf-schema#label> "radius" .
+# 
+# http://vehiclegoodrelations.org/#torque
+<http://vehiclegoodrelations.org/#torque> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#torque> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#torque> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#EngineSpecs> .
+<http://vehiclegoodrelations.org/#torque> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#torque> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne le couple du moteur" .
+<http://vehiclegoodrelations.org/#torque> <http://www.w3.org/2000/01/rdf-schema#label> "torque" .
+# 
+# http://vehiclegoodrelations.org/#valveCount
+<http://vehiclegoodrelations.org/#valveCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vehiclegoodrelations.org/#valveCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> .
+<http://vehiclegoodrelations.org/#valveCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ThermalEngine> .
+<http://vehiclegoodrelations.org/#valveCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> .
+<http://vehiclegoodrelations.org/#valveCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne le nombre de vavle du moteur" .
+<http://vehiclegoodrelations.org/#valveCount> <http://www.w3.org/2000/01/rdf-schema#label> "valve count" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://vehiclegoodrelations.org/deliveryServedCountry
+<http://vehiclegoodrelations.org/deliveryServedCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vehiclegoodrelations.org/deliveryServedCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#DeliveryRange> .
+<http://vehiclegoodrelations.org/deliveryServedCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://vehiclegoodrelations.org/deliveryServedCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique les pays qui peuvent être livrés en se référant à leur URI." .
+<http://vehiclegoodrelations.org/deliveryServedCountry> <http://www.w3.org/2000/01/rdf-schema#label> "delivery served country" .
+# 
+# http://vehiclegoodrelations.org/#has_camera
+<http://vehiclegoodrelations.org/#has_camera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vehiclegoodrelations.org/#has_camera> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ProximitySensing> .
+<http://vehiclegoodrelations.org/#has_camera> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vehiclegoodrelations.org/#has_camera> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique si le système de proximity sensing est pourvu d'une caméra de recul" .
+<http://vehiclegoodrelations.org/#has_camera> <http://www.w3.org/2000/01/rdf-schema#label> "has camera" .
+# 
+# http://vehiclegoodrelations.org/#has_cruiseControl
+<http://vehiclegoodrelations.org/#has_cruiseControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vehiclegoodrelations.org/#has_cruiseControl> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#SpeedControl> .
+<http://vehiclegoodrelations.org/#has_cruiseControl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vehiclegoodrelations.org/#has_cruiseControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique si le système de régulation de la vitesse à le cruise control." .
+<http://vehiclegoodrelations.org/#has_cruiseControl> <http://www.w3.org/2000/01/rdf-schema#label> "has cruise control" .
+# 
+# http://vehiclegoodrelations.org/#has_frontSensors
+<http://vehiclegoodrelations.org/#has_frontSensors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vehiclegoodrelations.org/#has_frontSensors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ProximitySensing> .
+<http://vehiclegoodrelations.org/#has_frontSensors> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vehiclegoodrelations.org/#has_frontSensors> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique s'il y a des capteurs à l'avant" .
+<http://vehiclegoodrelations.org/#has_frontSensors> <http://www.w3.org/2000/01/rdf-schema#label> "has front sensors" .
+# 
+# http://vehiclegoodrelations.org/#has_rearSensors
+<http://vehiclegoodrelations.org/#has_rearSensors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vehiclegoodrelations.org/#has_rearSensors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#ProximitySensing> .
+<http://vehiclegoodrelations.org/#has_rearSensors> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vehiclegoodrelations.org/#has_rearSensors> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique s'il y a des capteurs à l'arrière" .
+<http://vehiclegoodrelations.org/#has_rearSensors> <http://www.w3.org/2000/01/rdf-schema#label> "has rear sensors" .
+# 
+# http://vehiclegoodrelations.org/#has_speedLimiter
+<http://vehiclegoodrelations.org/#has_speedLimiter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vehiclegoodrelations.org/#has_speedLimiter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#SpeedControl> .
+<http://vehiclegoodrelations.org/#has_speedLimiter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vehiclegoodrelations.org/#has_speedLimiter> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique si le système de régulation de la vitesse à le limiteur de vitesse." .
+<http://vehiclegoodrelations.org/#has_speedLimiter> <http://www.w3.org/2000/01/rdf-schema#label> "has speed limiter" .
+# 
+# http://vehiclegoodrelations.org/#has_traffic_information
+<http://vehiclegoodrelations.org/#has_traffic_information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vehiclegoodrelations.org/#has_traffic_information> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vehiclegoodrelations.org/#GPS> .
+<http://vehiclegoodrelations.org/#has_traffic_information> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vehiclegoodrelations.org/#has_traffic_information> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique si le gps est capable de connaître le traffic en temps réel" .
+<http://vehiclegoodrelations.org/#has_traffic_information> <http://www.w3.org/2000/01/rdf-schema#label> "has traffic information" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/goodrelations/v1#ProductOrService
+<http://purl.org/goodrelations/v1#ProductOrService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#Individual> .
+# 
+# http://vehiclegoodrelations.org/Electricity
+<http://vehiclegoodrelations.org/Electricity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/Electricity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#FuelType> .
+# 
+# http://vehiclegoodrelations.org/#AllWheelDrive
+<http://vehiclegoodrelations.org/#AllWheelDrive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#AllWheelDrive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Transmission> .
+<http://vehiclegoodrelations.org/#AllWheelDrive> <http://www.w3.org/2000/01/rdf-schema#label> "AllWheelDrive" .
+# 
+# http://vehiclegoodrelations.org/#AsynchronousElectricEngine
+<http://vehiclegoodrelations.org/#AsynchronousElectricEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#AsynchronousElectricEngine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#ElectricEngine> .
+<http://vehiclegoodrelations.org/#AsynchronousElectricEngine> <http://www.w3.org/2002/07/owl#disjointWith> <http://vehiclegoodrelations.org/#SynchronousElectricEngine> .
+<http://vehiclegoodrelations.org/#AsynchronousElectricEngine> <http://www.w3.org/2000/01/rdf-schema#label> "AsynchronousElelctricEngine" .
+# 
+# http://vehiclegoodrelations.org/#AutoPilot
+<http://vehiclegoodrelations.org/#AutoPilot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#AutoPilot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#DrivingHelp> .
+<http://vehiclegoodrelations.org/#AutoPilot> <http://www.w3.org/2000/01/rdf-schema#label> "AutoPilot" .
+# 
+# http://vehiclegoodrelations.org/#AutomaticGearbox
+<http://vehiclegoodrelations.org/#AutomaticGearbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#AutomaticGearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Gearbox> .
+<http://vehiclegoodrelations.org/#AutomaticGearbox> <http://www.w3.org/2002/07/owl#disjointWith> <http://vehiclegoodrelations.org/#Manual> .
+<http://vehiclegoodrelations.org/#AutomaticGearbox> <http://www.w3.org/2002/07/owl#priorVersion> "AutomaticGearbox" .
+# 
+# http://vehiclegoodrelations.org/#Battery
+<http://vehiclegoodrelations.org/#Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Battery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#EnergySource> .
+<http://vehiclegoodrelations.org/#Battery> <http://www.w3.org/2002/07/owl#disjointWith> <http://vehiclegoodrelations.org/#FuelTank> .
+<http://vehiclegoodrelations.org/#Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery" .
+# 
+# http://vehiclegoodrelations.org/#ClothInterior
+<http://vehiclegoodrelations.org/#ClothInterior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#ClothInterior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Interior> .
+<http://vehiclegoodrelations.org/#ClothInterior> <http://www.w3.org/2000/01/rdf-schema#label> "ClothInterior" .
+# 
+# http://vehiclegoodrelations.org/#DeliveryRange
+<http://vehiclegoodrelations.org/#DeliveryRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://vehiclegoodrelations.org/#Diesel
+<http://vehiclegoodrelations.org/#Diesel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Diesel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#FuelType> .
+<http://vehiclegoodrelations.org/#Diesel> <http://www.w3.org/2000/01/rdf-schema#label> "Diesel" .
+# 
+# http://vehiclegoodrelations.org/#DrivingHelp
+<http://vehiclegoodrelations.org/#DrivingHelp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#DrivingHelp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleOptions> .
+<http://vehiclegoodrelations.org/#DrivingHelp> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les aides à la conduite disponibles. (GPS, radar de recul, etc)" .
+<http://vehiclegoodrelations.org/#DrivingHelp> <http://www.w3.org/2000/01/rdf-schema#label> "DrivingHelp" .
+# 
+# http://vehiclegoodrelations.org/#DrivingSide
+<http://vehiclegoodrelations.org/#DrivingSide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#DrivingSide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleSpecs> .
+<http://vehiclegoodrelations.org/#DrivingSide> <http://www.w3.org/2000/01/rdf-schema#comment> "Spécifie le sens de circulation qui a été prévu pour la voiture." .
+<http://vehiclegoodrelations.org/#DrivingSide> <http://www.w3.org/2000/01/rdf-schema#label> "DrivingSide" .
+# 
+# http://vehiclegoodrelations.org/#ElectricEngine
+<http://vehiclegoodrelations.org/#ElectricEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#ElectricEngine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#EngineSpecs> .
+<http://vehiclegoodrelations.org/#ElectricEngine> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe donne le type de moteur électrique utilisé" .
+<http://vehiclegoodrelations.org/#ElectricEngine> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricEngine" .
+# 
+# http://vehiclegoodrelations.org/#EnergySource
+<http://vehiclegoodrelations.org/#EnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#EnergySource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleSpecs> .
+<http://vehiclegoodrelations.org/#EnergySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe permet de spéficier quelle ressource le véhicue utilise pour avancer." .
+<http://vehiclegoodrelations.org/#EnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "EnergySource" .
+# 
+# http://vehiclegoodrelations.org/#EngineSpecs
+<http://vehiclegoodrelations.org/#EngineSpecs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#EngineSpecs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleSpecs> .
+<http://vehiclegoodrelations.org/#EngineSpecs> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe donne des spécifications sur le moteur. A savoir son type (électrique, thermique, hybride) et s'il utilise du diesel ou de l'essence" .
+<http://vehiclegoodrelations.org/#EngineSpecs> <http://www.w3.org/2000/01/rdf-schema#label> "EngineSpecs" .
+# 
+# http://vehiclegoodrelations.org/#FrontWheelDrive
+<http://vehiclegoodrelations.org/#FrontWheelDrive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#FrontWheelDrive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Transmission> .
+<http://vehiclegoodrelations.org/#FrontWheelDrive> <http://www.w3.org/2000/01/rdf-schema#label> "FrontWheelDrive" .
+# 
+# http://vehiclegoodrelations.org/#FuelTank
+<http://vehiclegoodrelations.org/#FuelTank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#FuelTank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#EnergySource> .
+<http://vehiclegoodrelations.org/#FuelTank> <http://www.w3.org/2000/01/rdf-schema#label> "FuelTank" .
+# 
+# http://vehiclegoodrelations.org/#FuelType
+<http://vehiclegoodrelations.org/#FuelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#FuelType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#EngineSpecs> .
+<http://vehiclegoodrelations.org/#FuelType> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne le type de combustible utilisé par le moteur" .
+<http://vehiclegoodrelations.org/#FuelType> <http://www.w3.org/2000/01/rdf-schema#label> "FuelType" .
+# 
+# http://vehiclegoodrelations.org/#GPS
+<http://vehiclegoodrelations.org/#GPS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#GPS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#DrivingHelp> .
+<http://vehiclegoodrelations.org/#GPS> <http://www.w3.org/2000/01/rdf-schema#label> "GPS" .
+# 
+# http://vehiclegoodrelations.org/#Gasoline
+<http://vehiclegoodrelations.org/#Gasoline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Gasoline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#FuelType> .
+<http://vehiclegoodrelations.org/#Gasoline> <http://www.w3.org/2000/01/rdf-schema#label> "Gasoline" .
+# 
+# http://vehiclegoodrelations.org/#Gearbox
+<http://vehiclegoodrelations.org/#Gearbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Gearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleSpecs> .
+<http://vehiclegoodrelations.org/#Gearbox> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les spécifications de la boite de vitesses, par exemple si elle est automatique ou manuelle, et son nombre de rapports via une data property." .
+<http://vehiclegoodrelations.org/#Gearbox> <http://www.w3.org/2000/01/rdf-schema#label> "Gearbox" .
+# 
+# http://vehiclegoodrelations.org/#Hallogen
+<http://vehiclegoodrelations.org/#Hallogen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Hallogen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Lights> .
+<http://vehiclegoodrelations.org/#Hallogen> <http://www.w3.org/2000/01/rdf-schema#label> "Hallogen" .
+# 
+# http://vehiclegoodrelations.org/#HydridEngine
+<http://vehiclegoodrelations.org/#HydridEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#HydridEngine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#EngineSpecs> .
+<http://vehiclegoodrelations.org/#HydridEngine> <http://www.w3.org/2000/01/rdf-schema#label> "HybridEngine" .
+# 
+# http://vehiclegoodrelations.org/#Interior
+<http://vehiclegoodrelations.org/#Interior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Interior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleOptions> .
+<http://vehiclegoodrelations.org/#Interior> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les options de finitions intérieur des sièges" .
+<http://vehiclegoodrelations.org/#Interior> <http://www.w3.org/2000/01/rdf-schema#label> "Interior" .
+# 
+# http://vehiclegoodrelations.org/#Laser
+<http://vehiclegoodrelations.org/#Laser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Laser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Lights> .
+<http://vehiclegoodrelations.org/#Laser> <http://www.w3.org/2000/01/rdf-schema#label> "Laser" .
+# 
+# http://vehiclegoodrelations.org/#LeatherInterior
+<http://vehiclegoodrelations.org/#LeatherInterior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#LeatherInterior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Interior> .
+<http://vehiclegoodrelations.org/#LeatherInterior> <http://www.w3.org/2000/01/rdf-schema#label> "LeatherInterior" .
+# 
+# http://vehiclegoodrelations.org/#Led
+<http://vehiclegoodrelations.org/#Led> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Led> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Lights> .
+<http://vehiclegoodrelations.org/#Led> <http://www.w3.org/2000/01/rdf-schema#label> "Led" .
+# 
+# http://vehiclegoodrelations.org/#LeftDrivingSide
+<http://vehiclegoodrelations.org/#LeftDrivingSide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#LeftDrivingSide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#DrivingSide> .
+<http://vehiclegoodrelations.org/#LeftDrivingSide> <http://www.w3.org/2002/07/owl#disjointWith> <http://vehiclegoodrelations.org/#Right> .
+<http://vehiclegoodrelations.org/#LeftDrivingSide> <http://www.w3.org/2000/01/rdf-schema#comment> "Signifie que le volant est à droite pour une conduite à gauche" .
+<http://vehiclegoodrelations.org/#LeftDrivingSide> <http://www.w3.org/2000/01/rdf-schema#label> "LeftDrivingSide" .
+# 
+# http://vehiclegoodrelations.org/#Lights
+<http://vehiclegoodrelations.org/#Lights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Lights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleOptions> .
+<http://vehiclegoodrelations.org/#Lights> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les options concernant les phares de la voiture" .
+<http://vehiclegoodrelations.org/#Lights> <http://www.w3.org/2000/01/rdf-schema#label> "Lights" .
+# 
+# http://vehiclegoodrelations.org/#Manual
+<http://vehiclegoodrelations.org/#Manual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Manual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Gearbox> .
+<http://vehiclegoodrelations.org/#Manual> <http://www.w3.org/2000/01/rdf-schema#label> "ManualGearbox" .
+# 
+# http://vehiclegoodrelations.org/#PayInFourMethod
+<http://vehiclegoodrelations.org/#PayInFourMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#PayInFourMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PaymentMethod> .
+<http://vehiclegoodrelations.org/#PayInFourMethod> <http://www.w3.org/2000/01/rdf-schema#label> "PayInFourMethod" .
+# 
+# http://vehiclegoodrelations.org/#ProximitySensing
+<http://vehiclegoodrelations.org/#ProximitySensing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#ProximitySensing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#DrivingHelp> .
+<http://vehiclegoodrelations.org/#ProximitySensing> <http://www.w3.org/2000/01/rdf-schema#label> "ProximitySensing" .
+# 
+# http://vehiclegoodrelations.org/#RearWheelDrive
+<http://vehiclegoodrelations.org/#RearWheelDrive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#RearWheelDrive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Transmission> .
+<http://vehiclegoodrelations.org/#RearWheelDrive> <http://www.w3.org/2000/01/rdf-schema#label> "RearWheelDrive" .
+# 
+# http://vehiclegoodrelations.org/#Right
+<http://vehiclegoodrelations.org/#Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Right> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#DrivingSide> .
+<http://vehiclegoodrelations.org/#Right> <http://www.w3.org/2000/01/rdf-schema#comment> "Signifie que le volant est à gauche pour une conduite à droite" .
+<http://vehiclegoodrelations.org/#Right> <http://www.w3.org/2000/01/rdf-schema#label> "RightDrivingSide" .
+# 
+# http://vehiclegoodrelations.org/#SoundSystem
+<http://vehiclegoodrelations.org/#SoundSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#SoundSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleOptions> .
+<http://vehiclegoodrelations.org/#SoundSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les options possible en terme de système audio" .
+<http://vehiclegoodrelations.org/#SoundSystem> <http://www.w3.org/2000/01/rdf-schema#label> "SoundSystem" .
+# 
+# http://vehiclegoodrelations.org/#SpeedControl
+<http://vehiclegoodrelations.org/#SpeedControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#SpeedControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#DrivingHelp> .
+<http://vehiclegoodrelations.org/#SpeedControl> <http://www.w3.org/2000/01/rdf-schema#label> "SpeedControl" .
+# 
+# http://vehiclegoodrelations.org/#SynchronousElectricEngine
+<http://vehiclegoodrelations.org/#SynchronousElectricEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#SynchronousElectricEngine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#ElectricEngine> .
+<http://vehiclegoodrelations.org/#SynchronousElectricEngine> <http://www.w3.org/2000/01/rdf-schema#label> "SynchronousElectricEngine" .
+# 
+# http://vehiclegoodrelations.org/#ThermalEngine
+<http://vehiclegoodrelations.org/#ThermalEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#ThermalEngine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#EngineSpecs> .
+<http://vehiclegoodrelations.org/#ThermalEngine> <http://www.w3.org/2000/01/rdf-schema#label> "ThermalEngine" .
+# 
+# http://vehiclegoodrelations.org/#Transmission
+<http://vehiclegoodrelations.org/#Transmission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Transmission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleSpecs> .
+<http://vehiclegoodrelations.org/#Transmission> <http://www.w3.org/2000/01/rdf-schema#comment> "Donne les différentes transmissions possibles pour la voiture. (Traction, Propulsion, 4x4)" .
+<http://vehiclegoodrelations.org/#Transmission> <http://www.w3.org/2000/01/rdf-schema#label> "Transmission" .
+# 
+# http://vehiclegoodrelations.org/#Vehicle
+<http://vehiclegoodrelations.org/#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Vehicle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#ProductOrService> .
+<http://vehiclegoodrelations.org/#Vehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe représente les voitures proposées par l'entreprise" .
+<http://vehiclegoodrelations.org/#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle" .
+# 
+# http://vehiclegoodrelations.org/#VehicleOptions
+<http://vehiclegoodrelations.org/#VehicleOptions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#VehicleOptions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#VehicleSpecs> .
+<http://vehiclegoodrelations.org/#VehicleOptions> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette classe contient les options que l'acheteur peut choisir de rajouter au moment de l'achat." .
+<http://vehiclegoodrelations.org/#VehicleOptions> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleOptions" .
+# 
+# http://vehiclegoodrelations.org/#VehicleSpecs
+<http://vehiclegoodrelations.org/#VehicleSpecs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#VehicleSpecs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#ProductOrService> .
+<http://vehiclegoodrelations.org/#VehicleSpecs> <http://www.w3.org/2000/01/rdf-schema#comment> "Contient les sousclasses permettant de préciser les spécifications de la voiture." .
+<http://vehiclegoodrelations.org/#VehicleSpecs> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleSpecs" .
+# 
+# http://vehiclegoodrelations.org/#VelvetInterior
+<http://vehiclegoodrelations.org/#VelvetInterior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#VelvetInterior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Interior> .
+<http://vehiclegoodrelations.org/#VelvetInterior> <http://www.w3.org/2002/07/owl#incompatibleWith> "VelvetInterior" .
+# 
+# http://vehiclegoodrelations.org/#Xenon
+<http://vehiclegoodrelations.org/#Xenon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vehiclegoodrelations.org/#Xenon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vehiclegoodrelations.org/#Lights> .
+<http://vehiclegoodrelations.org/#Xenon> <http://www.w3.org/2000/01/rdf-schema#label> "Xenon" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://vehiclegoodrelations.org/#DeliveryModeHome
+<http://vehiclegoodrelations.org/#DeliveryModeHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vehiclegoodrelations.org/#DeliveryModeHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DeliveryMethod> .
+<http://vehiclegoodrelations.org/#DeliveryModeHome> <http://www.w3.org/2000/01/rdf-schema#comment> "Livraison par une société de livraison." .
+<http://vehiclegoodrelations.org/#DeliveryModeHome> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery mode home" .
+# 
+# http://vehiclegoodrelations.org/#Focal
+<http://vehiclegoodrelations.org/#Focal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vehiclegoodrelations.org/#Focal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vehiclegoodrelations.org/#SoundSystem> .
+<http://vehiclegoodrelations.org/#Focal> <http://www.w3.org/2000/01/rdf-schema#comment> "Des enceintes fournies par la marque Focal." .
+<http://vehiclegoodrelations.org/#Focal> <http://www.w3.org/2000/01/rdf-schema#label> "Focal" .
+# 
+# http://vehiclegoodrelations.org/#JBL
+<http://vehiclegoodrelations.org/#JBL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vehiclegoodrelations.org/#JBL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vehiclegoodrelations.org/#SoundSystem> .
+<http://vehiclegoodrelations.org/#JBL> <http://www.w3.org/2000/01/rdf-schema#comment> "Des enceintes fournies par la marque JBL." .
+<http://vehiclegoodrelations.org/#JBL> <http://www.w3.org/2000/01/rdf-schema#label> "JBL" .
+# 
+# http://vehiclegoodrelations.org/#Pioneer
+<http://vehiclegoodrelations.org/#Pioneer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vehiclegoodrelations.org/#Pioneer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vehiclegoodrelations.org/#SoundSystem> .
+<http://vehiclegoodrelations.org/#Pioneer> <http://www.w3.org/2000/01/rdf-schema#comment> "Des enceintes fournies par la marque Pioneer." .
+<http://vehiclegoodrelations.org/#Pioneer> <http://www.w3.org/2000/01/rdf-schema#label> "Pioneer" .
+# 
+# http://vehiclegoodrelations.org/#Sony
+<http://vehiclegoodrelations.org/#Sony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vehiclegoodrelations.org/#Sony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vehiclegoodrelations.org/#SoundSystem> .
+<http://vehiclegoodrelations.org/#Sony> <http://www.w3.org/2000/01/rdf-schema#comment> "Des enceintes fournies par la marque Sony." .
+<http://vehiclegoodrelations.org/#Sony> <http://www.w3.org/2000/01/rdf-schema#label> "Sony" .
+# 
+# http://vehiclegoodrelations.org/#Bang&Olusfen
+<http://vehiclegoodrelations.org/#Bang&Olusfen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vehiclegoodrelations.org/#Bang&Olusfen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vehiclegoodrelations.org/#SoundSystem> .
+<http://vehiclegoodrelations.org/#Bang&Olusfen> <http://www.w3.org/2000/01/rdf-schema#comment> "Des enceintes fournies par la marque Bang&Olusfen." .
+<http://vehiclegoodrelations.org/#Bang&Olusfen> <http://www.w3.org/2000/01/rdf-schema#label> "Bang&Olusfen" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid4 <http://www.w3.org/2002/07/owl#members> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Gasoline> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Diesel> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/Electricity> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid8 <http://www.w3.org/2002/07/owl#members> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#RearWheelDrive> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#FrontWheelDrive> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#AllWheelDrive> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid12 <http://www.w3.org/2002/07/owl#members> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#SpeedControl> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#ProximitySensing> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#GPS> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#AutoPilot> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid17 <http://www.w3.org/2002/07/owl#members> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#SoundSystem> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Lights> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Interior> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#DrivingHelp> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid22 <http://www.w3.org/2002/07/owl#members> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#VehicleOptions> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Transmission> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Gearbox> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#EngineSpecs> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#EnergySource> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#DrivingSide> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid29 <http://www.w3.org/2002/07/owl#members> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#ThermalEngine> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#HydridEngine> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#FuelType> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#ElectricEngine> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid34 <http://www.w3.org/2002/07/owl#members> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#VehicleOptions> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Transmission> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Gearbox> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#EngineSpecs> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#EnergySource> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid40 <http://www.w3.org/2002/07/owl#members> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Xenon> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Led> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Laser> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vehiclegoodrelations.org/#Hallogen> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
